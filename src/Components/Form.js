@@ -118,6 +118,7 @@ const Form = () => {
                         id="name"
                         value={pizzaInfo.name}
                         onChange={changeHandler}
+                        data-cy="name"
                     />
                     {errors.name.length > 0 ? <p className="error">{errors.name}</p> : null}
                 </label>
@@ -130,6 +131,7 @@ const Form = () => {
                         name="size"
                         id="size"
                         onChange={changeHandler}
+                        data-cy="size"
                     >
                         <option value="">--Chose One--</option>
                         <option value="Small">Small</option>
@@ -147,6 +149,7 @@ const Form = () => {
                         name="cheese"
                         checked={pizzaInfo.cheese}
                         onChange={changeHandler}
+                        data-cy="cheese"
                     />
                     Cheese
                     {errors.cheese.length > 0 ? <p className="error">{errors.cheese}</p> : null}
@@ -160,6 +163,7 @@ const Form = () => {
                         name="pepperoni"
                         checked={pizzaInfo.pepperoni}
                         onChange={changeHandler}
+                        data-cy="pepperoni"
                     />
                     Pepperoni
                     {errors.pepperoni.length > 0 ? <p className="error">{errors.pepperoni}</p> : null}
@@ -173,6 +177,7 @@ const Form = () => {
                         name="sausage"
                         checked={pizzaInfo.sausage}
                         onChange={changeHandler}
+                        data-cy="sausage"
                     />
                     Sausage
                     {errors.sausage.length > 0 ? <p className="error">{errors.sausage}</p> : null}
@@ -186,6 +191,7 @@ const Form = () => {
                         name="ham"
                         checked={pizzaInfo.ham}
                         onChange={changeHandler}
+                        data-cy="ham"
                     />
                     Ham
                     {errors.ham.length > 0 ? <p className="error">{errors.ham}</p> : null}
@@ -199,6 +205,7 @@ const Form = () => {
                         name="pineapple"
                         checked={pizzaInfo.pineapple}
                         onChange={changeHandler}
+                        data-cy="pineapple"
                     />
                     Pineapple
                     {errors.pineapple.length > 0 ? <p className="error">{errors.pineapple}</p> : null}
@@ -212,6 +219,7 @@ const Form = () => {
                         name="mushroom"
                         checked={pizzaInfo.mushroom}
                         onChange={changeHandler}
+                        data-cy="mushroom"
                     />
                     Mushroom
                     {errors.mushroom.length > 0 ? <p className="error">{errors.mushroom}</p> : null}
@@ -226,11 +234,12 @@ const Form = () => {
                         name="specialInstructions"
                         value={pizzaInfo.specialInstructions}
                         onChange={changeHandler}
+                        data-cy="instructions"
                     />
                     {errors.specialInstructions.length > 0 ? <p className="error">{errors.specialInstructions}</p> : null}
                 </label>
 
-                <button disabled={buttonIsDisabled} type="submit">Add to Order</button>
+                <button disabled={buttonIsDisabled} type="submit" data-cy="submit">Add to Order</button>
                 {order &&<pre>{JSON.stringify(order, null, 2)}</pre>}
             </form>
         </div>
